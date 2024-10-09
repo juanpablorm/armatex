@@ -1,0 +1,139 @@
+.mainLogo-line {
+    border: 5px solid #0E2841;
+    width: 0;
+    padding: 0;
+    margin: 0px 40px;
+}
+
+.mainLogo-text {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    font-style: normal;
+    color: #0E2841;
+    margin: 0px;
+    text-align: left;
+}
+
+/* Animación para la imagen (izquierda a derecha) */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación para la línea (de arriba hacia abajo) */
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación para el texto (de derecha a izquierda) */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Aplica la animación a la imagen */
+.img-fluid {
+    opacity: 0;
+    animation: slideInLeft 2.5s ease-out forwards;
+}
+
+/* Aplica la animación a la línea */
+.mainLogo-line {
+    opacity: 0;
+    animation: slideInTop 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+    /* Retrasa la animación de la línea */
+}
+
+/* Aplica la animación a los textos, con retraso para cada uno */
+.mainLogo-text {
+    opacity: 0;
+    animation: slideInRight 1.5s ease-out forwards;
+}
+
+.mainLogo-text:nth-child(1) {
+    animation-delay: 1s;
+    /* TOLDOS */
+}
+
+.mainLogo-text:nth-child(2) {
+    animation-delay: 1.2s;
+    /* DOMOS */
+}
+
+.mainLogo-text:nth-child(3) {
+    animation-delay: 1.4s;
+    /* PERGOLAS */
+}
+
+.mainLogo-text:nth-child(4) {
+    animation-delay: 1.6s;
+    /* PISO SPC */
+}
+
+.mainLogo-text:nth-child(5) {
+    animation-delay: 1.8s;
+    /* LAMBRIN */
+}
+
+@media (min-width: 0px) {
+    .mainLogo-line {
+        border: 2px solid #0E2841;
+        margin: 0px 20px;
+    }
+
+    .mainLogo-text {
+        font-size: 0.5rem;
+    }
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+    .mainLogo-line {
+        border: 3px solid #0E2841;
+        margin: 0px 30px;
+    }
+    
+    .mainLogo-text {
+        font-size: 0.8rem;
+    }  
+}
+
+@media (min-width: 992px) {
+    
+}
+
+@media (min-width: 1200px) {
+    .mainLogo-line {
+        border: 5px solid #0E2841;
+        margin: 0px 40px;
+    }
+    
+    .mainLogo-text {
+        font-size: 1.2rem;
+    }
+}

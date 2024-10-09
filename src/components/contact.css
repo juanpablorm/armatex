@@ -1,0 +1,147 @@
+.contact-title {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    color: #0E2841;
+}
+
+.contact-text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    color: #0E2841;
+}
+
+.contact-card{
+    width: 100%;
+    padding: 20px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    border-radius: 6px;
+}
+
+.contact-cardText {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: left;
+    color: #0E2841;
+}
+
+.contact-cardAltText {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: left;
+    color: #0E2841;
+}
+
+.contact-input{
+    width: 100%;
+    border: 1px solid #0E2841;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    padding: 6px 16px;
+}
+
+.contact-button{
+    width: 50%;
+    background-color: #FE5000;
+    border: 1px solid #FE5000;
+    color: #ffffff;
+    border-radius: 6px;
+  }
+  
+  .contact-button:hover{
+    background-color: #ffffff;
+    border: 1px solid #FE5000;
+    color: #FE5000;
+  }
+
+.contact-cardIcon {
+    text-align: left;
+}
+
+.facebook{
+    color: #0866FF;
+}
+
+.whatsapp{
+    color: #25D366;
+}
+
+.instagram{
+    color: #E46242;
+}
+
+@media (min-width: 0px) {
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .contact-text {
+        font-size: 1rem;
+    }
+
+    .contact-cardText {
+        font-size: 1rem;
+    }
+
+    .contact-cardAltText {
+        font-size: 1rem;
+    }
+
+    .contact-input{
+        font-size: 1rem;
+    }
+
+    .contact-button{
+        font-size: 1rem;
+        padding: 6px;
+      }
+
+    .icons{
+        font-size: 1.5rem;
+    }
+    .contact-form{
+        padding-top: 20px;
+    }
+}
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {
+    .contact-form{
+        padding-top: 0px;
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    .contact-title {
+        font-size: 2.4rem;
+    }
+
+    .contact-text {
+        font-size: 1.2rem;
+    }
+
+    .contact-cardText {
+        font-size: 1.2rem;
+    }
+
+    .contact-cardAltText {
+        font-size: 1.2rem;
+    }
+
+    .contact-input{
+        font-size: 1.2rem;
+    }
+
+    .icons{
+        font-size: 2rem;
+    }
+}

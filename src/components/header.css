@@ -1,0 +1,28 @@
+.custom-navbar {
+  background-color: #ffffff !important;
+  padding: 25px;
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar {
+  color: #0e2841 !important;
+  font-size: 2rem;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #0e2841 !important;
+}
+
+.nav-item {
+  font-size: 1rem;
+}
+
+.navbar-logo {
+  padding: 0px;
+}
+
+.active {
+  text-decoration-line: underline;
+  text-decoration-color: #FE5000;
+  text-decoration-thickness: 3px;
+}

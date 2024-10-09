@@ -1,0 +1,142 @@
+.gallery-item {
+  min-width: 100%;
+  display: block;
+  max-height: 500px;
+  box-shadow: 5px 5px rgba(0,0,0,0.3);
+  object-fit: cover;
+}
+
+.figure {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+.figure > img {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+
+.figure a {
+  color: black;
+  text-decoration: none;
+}
+
+.container-gallery {
+  column-gap: 15px;
+}
+
+.gallery-card{
+  width: 100%;
+  margin: 10px 0px 10px 0px;
+}
+.gallery-cardTitle{
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: right;
+  color: #0E2841;
+}
+
+.gallery-cardText{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-align: right;
+  color: #0E2841;
+}
+
+.gallery-button{
+  width: 50%;
+  margin-left: 50%;
+  background-color: #FE5000;
+  border: 1px solid #FE5000;
+  color: #ffffff;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.gallery-button:hover{
+  background-color: #ffffff;
+  border: 1px solid #FE5000;
+  color: #FE5000;
+}
+
+.gallery-line {
+  width: 100%;
+  background-color: #FE5000;
+  height: 2px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 0px) {
+  .container-gallery {
+    column-count: 2;
+  }
+
+  .gallery-cardTitle{
+    font-size: 1.2rem;
+  }
+
+  .gallery-cardText{
+    font-size: 0.8rem;
+  }
+
+  .gallery-button{
+    font-size: 0.8rem;
+    padding: 8px 24px;
+  }
+}
+
+@media (min-width: 576px) {
+  .gallery-cardTitle{
+    font-size: 1.6rem;
+  }
+
+  .gallery-cardText{
+    font-size: 1.2rem;
+  }
+
+  .gallery-button{
+    font-size: 1rem;
+    padding: 8px 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-gallery {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 992px) {
+  .gallery-cardTitle{
+    font-size: 1.8rem;
+  }
+
+  .gallery-cardText{
+    font-size: 1.4rem;
+  }
+
+  .gallery-button{
+    font-size: 1.2rem;
+    padding: 8px 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-cardTitle{
+    font-size: 2.4rem;
+  }
+
+  .gallery-cardText{
+    font-size: 1.4rem;
+  }
+
+  .gallery-button{
+    font-size: 1.2rem;
+    padding: 6px 18px;
+  }
+}
