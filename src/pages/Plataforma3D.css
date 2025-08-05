@@ -1,0 +1,180 @@
+.plataforma3D-container{
+    min-height: calc(100vh - 100px); /* Ajustar para considerar el espacio del Header */
+    width: 100%;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    margin-top: 100px;
+}
+
+.plataforma3D-content {
+  width: 100%;
+  max-width: 900px; /* Limita el ancho máximo del contenido */
+}
+
+.plataforma3D-mainTitle{
+  font-family: "Teachers", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    color: #0E2841;
+    text-decoration: underline #FE5000;
+}
+
+.plataforma3D-card{
+    width: 80%;
+    padding: 20px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    border-radius: 6px; 
+}
+
+.plataforma3D-cardText {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: left;
+    color: #0E2841;
+    margin: 0px;
+}
+
+.plataforma3D-cardAltText {
+  font-family: "Teachers", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    color: #0E2841;
+    text-decoration: none !important;
+}
+
+.plataforma3D-line {
+    width: 100%;
+    background-color: #FE5000;
+    height: 2px;
+    margin-bottom: 16px;
+  }
+
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .carousel-content {
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .arrow-left, .arrow-right {
+    color: #0E2841;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+
+@media (min-width: 0px) {
+    .plataforma3D-mainTitle{
+        font-size: 2rem;
+    }
+
+    .plataforma3D-cardText{
+      font-size: 1rem;
+    }
+
+    .plataforma3D-cardAltText{
+    font-size: 1.4rem;
+    }
+
+    .arrow-left {
+      left: 10%;
+    }
+    
+    .arrow-right {
+      right: 10%;
+    }
+
+    .arrow-left, .arrow-right {
+      top: 45%;
+      font-size: 2rem;
+    }
+
+    .plataforma3D-card{
+      margin: 0px 10% 10% 10%;    
+  }
+}
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {
+    .plataforma3D-mainTitle{
+        font-size: 3rem;
+    }
+
+    .arrow-left {
+      left: 15%;
+    }
+    
+    .arrow-right {
+      right: 15%;
+    }
+
+    .arrow-left, .arrow-right {
+      font-size: 3rem;
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    .plataforma3D-cardText{
+        font-size: 1rem;
+  }
+
+    .plataforma3D-cardAltText{
+        font-size: 1.6rem;
+  }
+
+  .arrow-left {
+    left: 23%;
+  }
+  
+  .arrow-right {
+    right: 23%;
+  }
+
+  .arrow-left, .arrow-right {
+    font-size: 4rem;
+  }
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5); /* Para darle un poco de estilo */
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+.carousel-control.left {
+  left: 10px; /* Ajusta la posición horizontal */
+}
+
+.carousel-control.right {
+  right: 10px; /* Ajusta la posición horizontal */
+}
+
+.arrow-left:hover, .arrow-right:hover {
+  color: #FE5000;
+}
+
+.carousel-model {
+  width: 100%;
+}

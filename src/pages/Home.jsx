@@ -6,23 +6,36 @@ import GalleryComponent from '../components/gallery';
 import Values from '../components/values';
 import Contact from '../components/contact';
 import Footer from '../components/footer';
-
-window.addEventListener('scroll', function () {
-  const segmentA = document.getElementById('segmentA');
-  const scrollPosition = window.scrollY;
-  const windowHeight = window.innerHeight;
-
-  const fadeFactor = 0.5; // Ajusta la velocidad del desvanecimiento
-
-  if (scrollPosition < windowHeight * fadeFactor) {
-    const opacity = 1 - (scrollPosition / (windowHeight * fadeFactor));
-    segmentA.style.opacity = opacity;
-  } else {
-    segmentA.style.opacity = 0; // Totalmente transparente cuando se ha desplazado lo suficiente
-  }
-});
+import { useEffect } from 'react';
 
 function Home() {
+  useEffect(() => {
+    const segmentA = document.getElementById('segmentA');
+
+    // Verifica si segmentA existe antes de intentar acceder a sus propiedades
+    if (segmentA) {
+      const handleScroll = () => {
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const fadeFactor = 0.5; // Ajusta la velocidad del desvanecimiento
+
+        if (scrollPosition < windowHeight * fadeFactor) {
+          const opacity = 1 - scrollPosition / (windowHeight * fadeFactor);
+          segmentA.style.opacity = opacity;
+        } else {
+          segmentA.style.opacity = 0;
+        }
+      };
+
+      window.addEventListener('scroll', handleScroll);
+
+      // Cleanup para evitar fugas de memoria
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, []);
+
   return (
     <div>
       <Header />
@@ -43,8 +56,8 @@ function Home() {
             <Values />
           </div>
         </div>
-        <div className="container">
-          <div className="contact-component">
+        <div className="contact-component">
+          <div className="container">
             <Contact />
           </div>
         </div>

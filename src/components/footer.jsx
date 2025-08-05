@@ -1,9 +1,10 @@
 import './footer.css'
 import logo from '../img/ARMATEX_BLA_N.png'
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
-        <div className="container footer-container">
+        <div className="footer-container">
             <div className="row">
                 <div className="col-12 col-md-4">
                     <div className="footer-line"></div>
@@ -12,10 +13,12 @@ function Footer() {
                 </div>
                 <div className="col-12 col-md-4">
                     <p className="footer-title">Menu</p>
-                    <p className="footer-text">Home</p>
-                    <p className="footer-text">Plataforma 3D</p>
+                    <nav>
+                    <Link to="/"><p className="footer-text">Home</p></Link>
+                    <Link to="/Plataforma3D"><p className="footer-text">Plataforma 3D</p></Link>
                     <p className="footer-text">Galería</p>
                     <p className="footer-text">Nosotros</p>
+                    </nav>
                 </div>
                 <div className="col-12 col-md-4">
                     <p className="footer-title">Redes Sociales</p>
