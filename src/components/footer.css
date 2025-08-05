@@ -1,7 +1,9 @@
 .footer-container{
-    background-color: #FE5000;
-    color: #ffffff;
-    padding: 20px 0px;
+    width: 100%;
+    background-color: #FE5000; /* Por ejemplo */
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
 }
 
 .footer-line{
@@ -17,7 +19,7 @@
 }
 
 .footer-title {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Teachers", sans-serif;
     font-weight: 500;
     font-style: normal;
     text-align: center;
