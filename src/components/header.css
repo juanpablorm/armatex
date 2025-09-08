@@ -1,16 +1,26 @@
 .custom-navbar {
-  background-color: #ffffff !important;
+  background-color: #0e2841 !important;
   padding: 25px;
 }
 
 .custom-navbar .navbar-brand,
 .custom-navbar {
-  color: #0e2841 !important;
+  color: #ffffff !important;
   font-size: 2rem;
 }
 
+.custom-navbar .nav-link{
+  color: #ffffff !important;
+}
+
 .custom-navbar .nav-link:hover {
-  color: #0e2841 !important;
+  color: #FE5000 !important;
+}
+
+.nav-link.active-link {
+  text-decoration-line: underline;
+  text-decoration-color: #FE5000;
+  text-decoration-thickness: 3px;
 }
 
 .nav-item {
@@ -21,8 +31,19 @@
   padding: 0px;
 }
 
-.active {
-  text-decoration-line: underline;
-  text-decoration-color: #FE5000;
-  text-decoration-thickness: 3px;
+.bi{
+  color: #ffffff !important;
+}
+
+.navbar-toggler {
+  border: none;        /* quita el borde */
+  box-shadow: none;    /* quita el sombreado al hacer focus */
+  outline: none;       /* evita borde azul en algunos navegadores */
+  background: none;    /* opcional, si no quieres fondo */
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
 }

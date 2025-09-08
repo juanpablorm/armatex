@@ -21,7 +21,7 @@
 }
 
 #segmentB {
-  background-color: #f1f1f1;
+  background-color: #f4f4f4;
   position: relative;
   z-index: 2;
   margin-top: 100vh;
@@ -51,7 +51,7 @@
 }
 
 .footer-component {
-  background-color: #FE5000;
+  background-color: #0E2841;
   width: 100%;
 }
 
