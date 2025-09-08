@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Plataforma3D.css';
+import './elements.css';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import model from '../models/pergola.glb';
@@ -8,9 +9,19 @@ import model2 from '../models/casa2.glb';
 import poster from '../img/poster.webp';
 
 const Plataforma3DPage = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
 
-    const carouselItems = [
+    const [current, setCurrent] = useState(2);
+
+    const prevSlide = () => {
+        setCurrent((current - 1 + images.length) % images.length);
+    };
+
+    const nextSlide = () => {
+        setCurrent((current + 1) % images.length);
+    };
+
+
+    const images = [
         {
             id: 1,
             title: 'TOLDO',
@@ -31,29 +42,34 @@ const Plataforma3DPage = () => {
         }
     ];
 
-    const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselItems.length);
-    };
-
-    const handlePrev = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + carouselItems.length) % carouselItems.length);
-    };
-
     return (
         <div>
             <Header />
-            <div className="plataforma3D-container">
+            <div className="allContainer">
                 <div className="container plataforma3D-content">
                     <div className="col-12">
-                        <p className="plataforma3D-mainTitle">PLATAFORMA 3D</p>
+                        <p className="mainTitle">PLATAFORMA 3D</p>
                     </div>
-                    <div className="row plataforma3D-carousel">
-                        <div className="col-12">
-                            {carouselItems.map((item, index) => (
-                                index === currentIndex && (
-                                    <div key={item.id}>
+                    <div className="carousel-container">
+                        <button className="nav-button left" onClick={prevSlide}>‹</button>
+                        <div className="carousel">
+                            {images.map((src, index) => {
+                                const offset = index - current;
+                                let className = 'slide';
+
+                                if (offset === 0) className += ' active';
+                                else if (offset === -1 || offset === images.length - 1) className += ' left';
+                                else if (offset === 1 || offset === -(images.length - 1)) className += ' right';
+                                else className += ' hidden';
+
+                                return (
+                                    <div
+                                        key={index}
+                                        className={className}
+                                        alt={`Slide ${index}`}
+                                    >
                                         <model-viewer
-                                            src={item.modelSrc}
+                                            src={src.modelSrc}
                                             ar
                                             ar-modes="webxr scene-viewer quick-look"
                                             camera-controls
@@ -61,27 +77,22 @@ const Plataforma3DPage = () => {
                                             poster={poster}
                                             shadow-intensity="1"
                                             auto-rotate
-                                            min-camera-orbit="0deg 75deg 1m"
-                                            className="carousel-model"
+                                            min-camera-orbit="270deg 0deg 1m"
                                         >
                                             <div className="progress-bar hide" slot="progress-bar">
                                                 <div className="update-bar"></div>
                                             </div>
                                         </model-viewer>
-
                                         <div className="plataforma3D-card">
-                                            <p className="plataforma3D-cardAltText">{item.title}</p>
+                                            <p className="plataforma3D-cardAltText">{src.title}</p>
                                             <div className="plataforma3D-line"></div>
-                                            <p className="plataforma3D-cardText">{item.description}</p>
+                                            <p className="plataforma3D-cardText">{src.description}</p>
                                         </div>
                                     </div>
-                                )
-                            ))}
+                                );
+                            })}
                         </div>
-                    </div>
-                    <div className="carousel-controls">
-                        <i className="fas fa-chevron-left arrow-left" onClick={handlePrev}></i>
-                        <i className="fas fa-chevron-right arrow-right" onClick={handleNext}></i>
+                        <button className="nav-button right" onClick={nextSlide}>›</button>
                     </div>
                 </div>
             </div>
@@ -92,6 +103,6 @@ const Plataforma3DPage = () => {
             </div>
         </div>
     );
-}
+};
 
 export default Plataforma3DPage;

@@ -16,8 +16,8 @@ function Footer() {
                     <nav>
                     <Link to="/"><p className="footer-text">Home</p></Link>
                     <Link to="/Plataforma3D"><p className="footer-text">Plataforma 3D</p></Link>
-                    <p className="footer-text">Galería</p>
-                    <p className="footer-text">Nosotros</p>
+                    <Link to="/Galeria"><p className="footer-text">Galería</p></Link>
+                    <Link to="/Nosotros"><p className="footer-text">Nosotros</p></Link>
                     </nav>
                 </div>
                 <div className="col-12 col-md-4">

@@ -1,23 +1,3 @@
-.nosotros-container {
-    min-height: calc(100vh - 100px); /* Ajustar para considerar el espacio del Header */
-    width: 100%;
-    background-color: #f1f1f1;
-    display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    margin-top: 100px;
-}
-
-.nosotros-mainTitle{
-    font-family: "Teachers", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    text-align: center;
-    color: #0E2841;
-    text-decoration: underline #FE5000;
-    margin-bottom: 50px;
-}
-
 .nosotros-title{
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -34,24 +14,9 @@
     color: #0E2841;
 }
 
-.nosotros-content{
-    padding-bottom: 100px;
-}
-
-.nosotros-container {
-    min-height: 100vh; /* Hace que el contenedor ocupe al menos toda la altura de la pantalla */
-    width: 100%;
-    background-color: #f1f1f1;
-}
-
-.nosotros-content {
-    width: 100%;
-    max-width: 1200px; /* Limita el ancho máximo del contenido */
-}
-
 .nostros-row {
     display: flex;
-    flex-wrap: wrap; /* Para hacer que las columnas se comporten de manera responsiva */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -60,7 +25,7 @@
     display: block;
     margin: 20px auto;
     max-width: 100%;
-    height: auto; /* Asegura que la imagen sea responsiva */
+    height: auto;
 }
 
 @media (min-width: 0px) {
