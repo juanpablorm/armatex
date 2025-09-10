@@ -6,7 +6,7 @@ function Header() {
     return (
         <nav className="navbar fixed-top navbar-expand-lg bg-body-tertiary custom-navbar">
             <div className="container-fluid">
-                <a className="navbar-logo navbar-brand" href="#">
+                <a className="navbar-logo navbar-brand" href="/">
                     <img src={logo} alt="ARMATEX" width="120" height="24" />
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
