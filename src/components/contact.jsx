@@ -9,17 +9,6 @@ function Contact() {
             </div>
             <div className="row">
                 <div className="col-12 col-md-6">
-                    <div className="contact-card">
-                        <p className="contact-cardText">Utiliza las siguientes vías de contacto, o rellena el formulario.</p>
-                        <p className="contact-cardAltText">Correo Electrónico</p>
-                        <p className="contact-cardText">armatex@gmail.com</p>
-                        <p className="contact-cardAltText">Redes Sociales</p>
-                        <p className="contact-cardIcon"><i className="icons facebook fa-brands fa-facebook"></i> <i className="icons whatsapp fa-brands fa-whatsapp"></i> <i className="icons instagram fa-brands fa-instagram"></i></p>
-                        <p className="contact-cardAltText">Teléfono</p>
-                        <p className="contact-cardText">91-1234-567</p>
-                    </div>
-                </div>
-                <div className="col-12 col-md-6">
                     <form action="mailto:jp@hormail.com" method="post" encType="text/plain" className='contact-form'>
                         <input className='contact-input' id="POST-name" type="text" name="Nombre" placeholder="Escribe tu nombre" required />
                         <input className='contact-input' id="POST-mail" type="email" name="Correo" placeholder="Escribe tu e-mail" required />
@@ -29,6 +18,17 @@ function Contact() {
                         <br />
                         <button className="contact-button" type="submit" value="Contactar">Cóntactar</button>
                     </form>
+                </div>
+                <div className="col-12 col-md-6">
+                    <div className="contact-card">
+                        <p className="contact-cardText">Utiliza las siguientes vías de contacto, o rellena el formulario.</p>
+                        <p className="contact-cardAltText">Correo Electrónico</p>
+                        <p className="contact-cardText">armatex@gmail.com</p>
+                        <p className="contact-cardAltText">Redes Sociales</p>
+                        <p className="contact-cardIcon"><i className="icons facebook fa-brands fa-facebook"></i> <i className="icons whatsapp fa-brands fa-whatsapp"></i> <i className="icons instagram fa-brands fa-instagram"></i></p>
+                        <p className="contact-cardAltText">Teléfono</p>
+                        <p className="contact-cardText">91-1234-567</p>
+                    </div>
                 </div>
             </div>
         </div>
