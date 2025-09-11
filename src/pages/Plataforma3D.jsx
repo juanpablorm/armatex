@@ -9,7 +9,7 @@ const Plataforma3DPage = () => {
   const [current, setCurrent] = useState(0);
   const [loading, setLoading] = useState(true);
 
-  const API = process.env.REACT_APP_API_URL || "http://localhost:4000/api"; // fallback opcional
+  const API = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     let alive = true;
@@ -68,7 +68,7 @@ const Plataforma3DPage = () => {
                   return (
                     <div key={src.id ?? index} className={className} alt={`Slide ${index}`}>
                       <model-viewer
-                        src={src.modelSrc}              // viene de la BD
+                        src={src.modelSrc}
                         ar
                         ar-modes="webxr scene-viewer quick-look"
                         camera-controls

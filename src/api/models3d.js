@@ -1,4 +1,4 @@
-const API = process.env.REACT_APP_API_URL || "http://localhost:4000/api"; // fallback opcional
+const API = process.env.REACT_APP_API_URL;
 
 export async function fetchModels3D() {
   const res = await fetch(`${API}/`);
